@@ -36,10 +36,10 @@ for i in `egrep -H OWNER= /var/cpanel/users/* | tr '/:=' ' ' | awk '{print$4":"$
                 fi
                 # main domain
                 domain=`egrep main_domain /var/cpanel/userdata/$user/main | awk '{print$2}'`
-                echo "$host,$owner,$user,$contact,$status,parent,$domain,$domain,$assigned_ip" >> /root/temp-get
+                echo "$host,$owner,$user,$contact,$status,parent,$domain,$domain,$assigned_ip"
                 # addons
                 for addon in `cat /var/cpanel/userdata/$user/main | egrep -v cp_php_magic_include_path.conf | awk '/addon_domains/{f=1;next}/main_domain/{f=0}f' | awk '{print$1}' | tr -d ':'`; do
-                        echo "$host,$owner,$user,$contact,$status,addon,$domain,$addon,$assigned_ip" >> /root/temp-get
+                        echo "$host,$owner,$user,$contact,$status,addon,$domain,$addon,$assigned_ip"
                 done
                 unset suspended unset status
         fi
@@ -122,7 +122,7 @@ for i in `cat $tmpf.userstubs`; do
                                 fi
                         fi
                 fi
-                echo "$prefix,$domain_ip,$hosted,$ns,$ns_ip,$ns_iplr" >> /root/temp-get
+                echo "$prefix,$domain_ip,$hosted,$ns,$ns_ip,$ns_iplr"
         fi
 done
 

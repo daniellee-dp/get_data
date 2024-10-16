@@ -2,7 +2,7 @@
 
 local_test="ns"
 ## egrep regex string of owned IP space
-local_ips='/sbin/ifconfig eth0 | awk '/inet / { print $2 }' | sed 's/addr://''
+local_ips=`/sbin/ifconfig eth0 | awk '/inet / { print $2 }' | sed 's/addr://'`
 ## name server domains owned by brand, considered local
 ## for ns1/ns2.domain.com, enter "domain.com"
 ## e.g local_ns="domain.com|whitelabelbrand.com|somens.com"

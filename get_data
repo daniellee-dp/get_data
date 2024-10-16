@@ -6,7 +6,7 @@ local_ips=`/sbin/ifconfig eth0 | awk '/inet / { print $2 }' | sed 's/addr://'`
 ## name server domains owned by brand, considered local
 ## for ns1/ns2.domain.com, enter "domain.com"
 ## e.g local_ns="domain.com|whitelabelbrand.com|somens.com"
-local_ns="fcomet.com|myfcloud*.com|mysafedns.com"
+local_ns="fcomet.com|myfcloud.com|myfcloudin.com|myfcloudto.com|myfcloudau.com|myfcloudtx.com|myfcloudfr.com|myfcloudat.com|myfcloudnw.com|myfclouduk.com|myfcloudsg.com|myfcloudde.com|myfcloudjp.com|myfcloudch.com|myfcloudla.com|myfcloudmi.com|myfcloudwa.com|myfclouddc.com|myfcloudoc.com|myfcloudtn.com|myfcloudid.com|myfcloudse.com|myfcloudnl.com|myfcloudit.com|myfcloudps.com|myfcloudbr.com|mysafedns.com"
 if [ "$1" ]; then
         local_ns="$1"
 fi
